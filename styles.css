@@ -30,6 +30,7 @@ body {
     padding: 10px;
     overflow-y: auto;
     font-size: 1.2em;
+    text-align: left;
 }
 
 /* Tip display */
@@ -39,7 +40,9 @@ body {
     padding: 10px;
     background-color: #f0f0f0;
     font-size: 1.1em;
-    flex: 0.3;
+    text-align: center;
+    height: 10vh;
+    max-height: 50px;
 }
 
 /* Button grid */
