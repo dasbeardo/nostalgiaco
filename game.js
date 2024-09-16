@@ -5,15 +5,15 @@ function updateGameText(text) {
     document.getElementById('game-text').innerText = text;
 }
 
-// Function to update the tip display
-function updateTipText(tip) {
-    document.getElementById('tip-text').innerText = tip;
+// Function to update the marquee display
+function updateMarqueeText(marq) {
+    document.getElementById('marquee').innerText = marq;
 }
 
 // Example: Update text when buttons are clicked
 document.querySelectorAll('.game-button').forEach(button => {
     button.addEventListener('click', () => {
         updateGameText("You pressed " + button.innerText);
-        updateTipText("Here's a tip for " + button.innerText);
+        updateMarqueeText("Here's a tip for " + button.innerText);
     });
 });
