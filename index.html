@@ -31,6 +31,30 @@
         </div>
     </div>
 
+    <!-- JavaScript to adjust the height dynamically -->
+    <script>
+        function isIOS() {
+    return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+}
+
+function adjustHeight() {
+    // Get the viewport height and set the body height
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    
+    // If it's an iOS device, set height to 85vh
+    if (isIOS()) {
+        document.body.style.height = '85vh';
+    } else {
+        document.body.style.height = '100vh';
+    }
+}
+
+// Call function on load and resize
+window.addEventListener('load', adjustHeight);
+window.addEventListener('resize', adjustHeight);
+    </script>
+
     <script src="game.js"></script>
 </body>
 </html>
